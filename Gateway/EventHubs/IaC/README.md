@@ -38,4 +38,8 @@ az eventhubs namespace network-rule add \
   --ip-address xxx.xxx.xxx.xxx \
   --resource-group $dataPipelineRgName \
   --namespace-name $eventhubsNameSpace
+  
+az eventhubs namespace network-rule list \
+  --resource-group $dataPipelineRgName \
+  --namespace-name $eventhubsNameSpace
 ```
