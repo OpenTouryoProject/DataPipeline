@@ -1,3 +1,3 @@
 # EventHubs Client
-- [EventHubs]()
-- [Kafka]()
+- [EventHubs](../../../Gateway/Client/EventHubs)
+- [Kafka](../../../Gateway/Client/Kafka)
