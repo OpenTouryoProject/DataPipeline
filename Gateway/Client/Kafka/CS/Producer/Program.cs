@@ -18,13 +18,15 @@ namespace KafkaProducer
         /// <returns>Task</returns>
         static async Task Main(string[] args)
         {
+            // 初期化
             KC.GetConfigParameter.InitConfig();
             KC.GetConfigParameter.GetConfigValues(out string brokerList, out string topic,
                 out string connectionString, out string cacertLocation, out string consumerGroup);
 
             try
             {
-                var config = new ProducerConfig
+                // ProducerConfig
+                ProducerConfig config = new ProducerConfig
                 {
                     BootstrapServers = brokerList,
 
@@ -38,6 +40,8 @@ namespace KafkaProducer
                     // Options
                     //Debug = "security,broker,protocol"
                 };
+
+                // ProducerBuilder
                 using (IProducer<long, string> producer
                     = new ProducerBuilder<long, string>(config)
                         .SetKeySerializer(Serializers.Int64)

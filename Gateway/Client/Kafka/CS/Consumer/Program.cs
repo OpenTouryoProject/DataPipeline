@@ -14,12 +14,13 @@ namespace KafkaConsumer
         /// <param name="args">string[]</param>
         static void Main(string[] args)
         {
+            //  初期化
             KC.GetConfigParameter.InitConfig();
             KC.GetConfigParameter.GetConfigValues(out string brokerList, out string topic,
                 out string connectionString, out string cacertLocation, out string consumerGroup);
 
             // ConsumerConfig
-            var config = new ConsumerConfig
+            ConsumerConfig config = new ConsumerConfig
             {
                 BootstrapServers = brokerList,
                 GroupId = consumerGroup,
@@ -41,6 +42,7 @@ namespace KafkaConsumer
                 //Debug = "security,broker,protocol"
             };
 
+            // ConsumerBuilder
             using (IConsumer<long, string> consumer
                 = new ConsumerBuilder<long, string>(config)
                     .SetKeyDeserializer(Deserializers.Int64)
