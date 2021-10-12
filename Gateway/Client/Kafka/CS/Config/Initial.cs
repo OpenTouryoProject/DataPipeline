@@ -2,35 +2,19 @@
 using System.IO;
 using System.Reflection;
 
-using OTRPU = Touryo.Infrastructure.Public.Util;
+using Touryo.Infrastructure.Public.Util;
 
 namespace KafkaConfig
 {
-    /// <summary>GetConfigParameter</summary>
-    public class GetConfigParameter
+    /// <summary>Initial</summary>
+    public class Initial
     {
         /// <summary>InitConfig</summary>
         public static void InitConfig()
         {
             string dir = new FileInfo(Assembly.GetExecutingAssembly().Location).Directory
                 .FullName.Replace(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar);
-            OTRPU.GetConfigParameter.InitConfiguration(dir + "/appsettings.json");
-        }
-
-        /// <summary>GetConfigValue</summary>
-        /// <param name="key">string</param>
-        /// <returns>string</returns>
-        public static string GetConfigValue(string key)
-        {
-            return OTRPU.GetConfigParameter.GetConfigValue(key);
-        }
-
-        /// <summary>GetConnectionString</summary>
-        /// <param name="key">string</param>
-        /// <returns>string</returns>
-        public static string GetConnectionString(string key)
-        {
-            return OTRPU.GetConfigParameter.GetConnectionString(key);
+            GetConfigParameter.InitConfiguration(dir + "/appsettings.json");
         }
 
         /// <summary>GetConfigValue</summary>

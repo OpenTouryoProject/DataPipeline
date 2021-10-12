@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 using Confluent.Kafka;
 
-using KC = KafkaConfig;
+using KafkaConfig;
 
 namespace KafkaConsumer
 {
@@ -15,8 +15,8 @@ namespace KafkaConsumer
         static void Main(string[] args)
         {
             //  初期化
-            KC.GetConfigParameter.InitConfig();
-            KC.GetConfigParameter.GetConfigValues(out string brokerList, out string topic,
+            Initial.InitConfig();
+            Initial.GetConfigValues(out string brokerList, out string topic,
                 out string connectionString, out string cacertLocation, out string consumerGroup);
 
             // ConsumerConfig
