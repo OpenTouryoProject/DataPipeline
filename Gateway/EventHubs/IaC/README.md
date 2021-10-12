@@ -20,6 +20,8 @@ echo $eventhubsName
 
 ### Creating an EventHubs
 ```Bash
+az group create --name $dataPipelineRgName --location $location
+
 az eventhubs namespace create \
   --name $eventhubsNameSpace \
   --resource-group $dataPipelineRgName \
