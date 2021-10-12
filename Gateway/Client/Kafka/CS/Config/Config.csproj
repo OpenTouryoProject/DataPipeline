@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>KafkaConfig</RootNamespace>
+    <AssemblyName>KafkaConfig</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Touryo.Infrastructure.Public" Version="2.7.0" />
+  </ItemGroup>
+
+</Project>
