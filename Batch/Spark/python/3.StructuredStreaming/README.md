@@ -55,5 +55,5 @@ query.awaitTermination()
 ```
 
 ### Reference
-- PySpark - .NET 開発基盤部会 Wiki > 詳細 > チュートリアル > 構造化ストリーミングでウィンドウ操作
+- PySpark - .NET 開発基盤部会 Wiki > 詳細 > チュートリアル > 構造化ストリーミングでウィンドウ操作  
 https://dotnetdevelopmentinfrastructure.osscons.jp/index.php?PySpark#x623bccd
