@@ -47,5 +47,5 @@ az eventhubs namespace network-rule list \
 ```
 
 ### Reference
-- Azure Event Hubsチュートリアル - マイクロソフト系技術情報 Wiki
+- Azure Event Hubsチュートリアル - マイクロソフト系技術情報 Wiki  
 https://techinfoofmicrosofttech.osscons.jp/index.php?Azure%20Event%20Hubs%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB
