@@ -1,4 +1,5 @@
 # Simplest
+This IaC is building Azure Event Hubs as big data streaming platform and event ingestion service.
 
 ### Variables
 
