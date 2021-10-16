@@ -1,4 +1,8 @@
 # Simplest
+This IaC is building Apache Kafka as open-source distributed event streaming platform.
+
+### How to perform
+Run the docker-compose up command in this directory.
 
 ### Reference
 - Kafkaチュートリアル - .NET 開発基盤部会 Wiki > 詳細 > Broker設定 > Dockerで
