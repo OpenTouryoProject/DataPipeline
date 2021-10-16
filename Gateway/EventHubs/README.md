@@ -1,2 +1,2 @@
 # EventHubs
-IaC, which is building Azure Event Hubs as gateway.
+Azure Event Hubs is a big data streaming platform and event ingestion service.
