@@ -32,5 +32,3 @@ Connect-AzAccount
 Register-AzResourceProvider -ProviderNamespace Microsoft.Databricks
 New-AzDatabricksWorkspace -Name $databricksName -ResourceGroupName $dataPipelineRgName -Location $location -ManagedResourceGroupName $managedRgName -Sku $sku
 ```
-
->New-AzDatabricksWorkspace -Name  -ResourceGroupName  -Location westus2 -ManagedResourceGroupName  -Sku 
