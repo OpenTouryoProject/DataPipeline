@@ -49,7 +49,8 @@ az eventhubs namespace network-rule list \
 
 ### Get the connection string and credentials
 ```Bash
-az eventhubs namespace authorization-rule list --resource-group $dataPipelineRgName --namespace-name $eventhubsNameSpace
+eventhubsAuthRuleName=$(az eventhubs namespace authorization-rule list --resource-group $dataPipelineRgName --namespace-name $eventhubsNameSpace --query "[0].name")
+az eventhubs namespace authorization-rule keys list --resource-group $dataPipelineRgName --namespace-name $eventhubsNameSpace --name $eventhubsAuthRuleName
 ```
 
 ### Reference
