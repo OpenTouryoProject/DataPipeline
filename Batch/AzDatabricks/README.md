@@ -10,11 +10,11 @@ This IaC is building Azure Databricks as distributed computing platform.
 
 ##### Define
 ```PowerShell
-$location=westus2
-$dataPipelineRgName=DplRG
-$managedRgName=DatabricksRG
-$databricksName=mydatabricksws
-$sku=standard
+$location="westus2"
+$dataPipelineRgName="DplRG"
+$managedRgName="DatabricksRG"
+$databricksName="mydatabricksws"
+$sku="standard"
 ```
 
 ##### Check
