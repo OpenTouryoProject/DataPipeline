@@ -26,7 +26,13 @@ echo $databricksName
 echo $sku
 ```
 
-#### Check
+#### Create Workspace
+If the ResourcesGroup does not exist, create it.
+```PowerShell
+New-AzResourceGroup -Name $dataPipelineRgName -Location $location
+```
+
+Create a Databricks workspace.
 ```PowerShell
 Connect-AzAccount
 Register-AzResourceProvider -ProviderNamespace Microsoft.Databricks
