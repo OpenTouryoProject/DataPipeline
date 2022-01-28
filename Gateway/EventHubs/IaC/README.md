@@ -47,6 +47,12 @@ az eventhubs namespace network-rule list \
   --namespace-name $eventhubsNameSpace
 ```
 
+### Get the connection string and credentials
+```Bash
+eventhubsAuthRuleName=$(az eventhubs namespace authorization-rule list --resource-group $dataPipelineRgName --namespace-name $eventhubsNameSpace --query "[0].name" | sed 's/"//g')
+az eventhubs namespace authorization-rule keys list --resource-group $dataPipelineRgName --namespace-name $eventhubsNameSpace --name $eventhubsAuthRuleName
+```
+
 ### Reference
 - Azure Event Hubsチュートリアル - マイクロソフト系技術情報 Wiki  
 https://techinfoofmicrosofttech.osscons.jp/index.php?Azure%20Event%20Hubs%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB
