@@ -7,5 +7,5 @@ spark.sql('SELECT "Test" as c1').show()
 ```
 
 ### Reference
-- PySpark - .NET 開発基盤部会 Wiki > 詳細 > チュートリアル > on Jupyter Notebook on Docker  
+- PySpark - 開発基盤部会 Wiki > 詳細 > チュートリアル > on Jupyter Notebook on Docker  
 https://dotnetdevelopmentinfrastructure.osscons.jp/index.php?PySpark#ffe40eef
