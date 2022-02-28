@@ -15,6 +15,7 @@ dataPipelineRgName=DplRG
 mlWorkSpaceName=myazmlws
 mlCompInstanceName=myazmlinstance
 mlCompClusterName=myazmlcluster
+mlCompVmSize=Standard_D2s_v3
 ```
 
 #### Check
@@ -24,6 +25,7 @@ echo $dataPipelineRgName
 echo $mlWorkSpaceName
 echo $mlCompInstanceName
 echo $mlCompClusterName
+echo $mlCompVmSize
 ```
 
 ### Creating an AzML
@@ -46,22 +48,22 @@ Create a computing environment.
 Instance
 ```Bash
 az ml computetarget create computeinstance \
-  --name $mlCompClusterName
-  --workspace-name $mlCompInstanceName
-  --resource-group $dataPipelineRgName
-  --vm-size "STANDARD_D3_V2"
+  --name $mlCompInstanceName \
+  --workspace-name $mlWorkSpaceName \
+  --resource-group $dataPipelineRgName \
+  --vm-size $mlCompVmSize
 ```
 
 Cluster
 ```Bash
 az ml computetarget create amlcompute \
-  --name $mlCompClusterName
-  --workspace-name $mlWorkSpaceName
-  --resource-group $dataPipelineRgName
-  --assign-identity '[system]'
-  --vm-size "STANDARD_D3_V2"
-  --min-nodes 0
-  --max-nodes 2
+  --name $mlCompClusterName \
+  --workspace-name $mlWorkSpaceName \
+  --resource-group $dataPipelineRgName \
+  --assign-identity '[system]' \
+  --vm-size $mlCompVmSize \
+  --min-nodes 0 \
+  --max-nodes 2 \
   --idle-seconds-before-scaledown 120
 ```
 
