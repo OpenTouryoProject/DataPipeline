@@ -1,9 +1,9 @@
 # AzML
 Azure Machine Learning
 
-### Sample
+## Sample
 
-### IaC
+## IaC
 This IaC is building Azure Machine Learning as trusted platform designed for responsible machine learning (ML).
 
 ### Variables

@@ -1,14 +1,14 @@
 # AzDatabricks
 
-### Sample
+## Sample
 See the [Spark sample](../Spark).
 
-### IaC
+## IaC
 This IaC is building Azure Databricks as distributed computing platform.
 
-#### Variables
+### Variables
 
-##### Define
+#### Define
 ```PowerShell
 $location="westus2"
 $dataPipelineRgName="DplRG"
@@ -17,7 +17,7 @@ $databricksName="mydatabricksws"
 $sku="standard"
 ```
 
-##### Check
+#### Check
 ```PowerShell
 echo $location
 echo $dataPipelineRgName
@@ -26,7 +26,7 @@ echo $databricksName
 echo $sku
 ```
 
-#### Create Workspace
+### Create Workspace
 If the ResourcesGroup does not exist, create it.
 ```PowerShell
 New-AzResourceGroup -Name $dataPipelineRgName -Location $location
